@@ -1,0 +1,75 @@
+@import url("note.css");
+@import url("category.css");
+
+* {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eeeeee;
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  max-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: clamp(10px, 5vw, 50px);
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #593e67;
+}
+
+button {
+  color: #593e67;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  word-spacing: -2px; 
+  user-select: none;
+  -webkit-user-select: none;
+  border: 1px solid #593e67;
+  border-radius: 0.5em;
+  box-shadow: 2px 3px 4px #593e67;
+  padding: 1em 1.2em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.01);
+  box-shadow: 3px 4px 5px #593e67;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:active {
+  background-color: #eadef0;
+  box-shadow: 1px 1px 1px #593e67;
+  transform: translateY(2px);
+}
+
+.container {
+  min-height: 300px;
+  max-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  margin: clamp(10px, 5vw, 50px);
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.dragging:hover{
+   transform: none; 
+}

@@ -1,0 +1,105 @@
+#notes {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: clamp(10px, 5vw, 40px);
+  overflow-y: auto;
+  box-shadow: 0 15px 15px -15px rgba(89, 62, 103, 0);
+}
+
+
+.note {
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  border: 2px solid #593e67;
+  border-radius: 0.5em;
+  padding: 1em 1em;
+  cursor: pointer;
+  opacity: 0;
+  position: relative;
+  transition:
+    transform 0.5s,
+    box-shadow 0.2s;
+}
+
+
+.noteLabel {
+  width: 100%;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  height: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 10px;
+  color: #593e67;
+  border: 2px solid #593e67;
+  border-radius: 0.2em;
+  padding: 0.1em 0.5em;
+  word-wrap: break-word;
+  overflow: hidden;
+  outline: none;
+  resize: none;
+}
+
+.noteSpan {
+  width: 100%;
+  height: auto;
+  min-height: 10rem;
+  font-size: 16px;
+  color: #593e67;
+  border: 2px solid #593e67;
+  border-radius: 0.5em;
+  padding: 0.1em 0.5em;
+  margin-bottom: 10px;
+  outline: none;
+  resize: none;
+}
+
+.note:hover {
+  transform: scale(1.01);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 5px 10px 20px rgba(89, 62, 103, 0.3);
+}
+
+.dropZone {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5em 0;
+  gap: 10px;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  box-shadow: none;
+  color: #593e67;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.note:hover .deleteBtn {
+  box-shadow: none;
+  transition: opacity 0.2s ease;
+  transform: none;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.note:hover .deleteBtn:hover {
+  color: rgb(255, 0, 0);
+  background: none;
+  transition: opacity 0.2s ease;
+}
+
+.note:active .deleteBtn{
+  box-shadow: none;
+  color: rgb(255, 0, 0);
+  background: none;
+  transition: opacity 0.2s ease;
+} 
